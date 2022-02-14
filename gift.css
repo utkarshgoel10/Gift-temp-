@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+* {
+	 box-sizing: border-box;
+	 position: relative;
+}
+ html {
+	 font-size: 100%;
+}
+ body {
+	 background: #eee;
+	 font-size: 10px;
+}
+ .heart {
+	 animation: 1s pulse infinite;
+	 margin: auto;
+	 position: relative;
+	 width: 40vmax;
+}
+ .heart:before, .heart:after {
+	 background: #ee565a;
+	 border-radius: 20vmax 20vmax 4vmax 4vmax;
+	 content: "";
+	 left: 20vmax;
+	 height: 32vmax;
+	 position: absolute;
+	 transform: rotate(-45deg);
+	 transform-origin: 0 100%;
+	 width: 20vmax;
+}
+ .heart:after {
+	 left: 0;
+	 transform: rotate(45deg);
+	 transform-origin: 100% 100%;
+}
+ .face {
+	 background: #222;
+	 border-radius: 0 0 10vmax 10vmax;
+	 border-top: 2vmax solid #fff;
+	 display: block;
+	 height: 6vmax;
+	 left: 14vmax;
+	 position: absolute;
+	 top: 16vmax;
+	 width: 12vmax;
+	 z-index: 5;
+}
+ .face:before, .face:after {
+	 background: #222;
+	 border-radius: 4vmax;
+	 box-shadow: 0 4vmax 0 -0.9vmax #e04e50;
+	 content: '';
+	 display: block;
+	 height: 4vmax;
+	 position: absolute;
+	 bottom: 8vmax;
+	 width: 4vmax;
+	 z-index: 5;
+}
+ .face:before {
+	 left: -4vmax;
+}
+ .face:after {
+	 right: -4vmax;
+}
+ h1 {
+	 background: #fff;
+	 border: 1px solid #ddd;
+	 border-radius: 20vmax;
+	 font: 100 3vmax/1 "Amatic SC";
+	 margin: 6vmax auto 4vmax;
+	 padding: 1vw;
+	 text-align: center;
+	 width: 50vmax;
+	 z-index: 5;
+	 font-family: 'Noto Sans', sans-serif;
+}
+ h1:after {
+	 border: 1vw solid transparent;
+	 border-color: transparent #fff #fff transparent;
+	 box-shadow: 0.1vmax 0.1vmax #ddd;
+	 content: '';
+	 display: block;
+	 left: 6vmax;
+	 position: absolute;
+	 transform: rotate(45deg);
+}
+ @keyframes pulse {
+	 80% {
+		 transform: scale(0.9);
+	}
+}
+
+
+
+
+body {
+	background: 
+radial-gradient(circle closest-side at 60% 43%, #323232 26%, rgba(187,0,51,0) 27%),
+radial-gradient(circle closest-side at 40% 43%, #323232 26%, rgba(187,0,51,0) 27%),
+radial-gradient(circle closest-side at 40% 22%, #373737 45%, rgba(221,51,85,0) 46%),
+radial-gradient(circle closest-side at 60% 22%, #373737 45%, rgba(221,51,85,0) 46%),
+radial-gradient(circle closest-side at 50% 35%, #373737 30%, rgba(221,51,85,0) 31%),
+
+radial-gradient(circle closest-side at 60% 43%, #323232 26%, rgba(187,0,51,0) 27%) 50px 50px,
+radial-gradient(circle closest-side at 40% 43%, #323232 26%, rgba(187,0,51,0) 27%) 50px 50px,
+radial-gradient(circle closest-side at 40% 22%, #3c3c3c 45%, rgba(221,51,85,0) 46%) 50px 50px,
+radial-gradient(circle closest-side at 60% 22%, #3c3c3c 45%, rgba(221,51,85,0) 46%) 50px 50px,
+radial-gradient(circle closest-side at 50% 35%, #3c3c3c 30%, rgba(221,51,85,0) 31%) 50px 50px;
+	background-color:#323232;
+	background-size:100px 100px;
+	font-family: 'Lato', sans-serif;
+}
+
+
+.centered {
+	width: 100%;
+	margin: 30vh auto;
+	text-align: center;
+}
+
+.centered h4 {
+	color: #FFFFFF;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+ input[type=checkbox]{
+  display:none;
+ }
+
+label {
+	height: 40px;
+	width: auto;
+	padding: 10px 40px;
+	display: inline-block; 
+	cursor: pointer;
+	margin: 0 20px;
+	border-radius: 5px;
+	color: #FFFFFF;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	text-transform: uppercase;
+	transition: all .25s ease-in-out;
+}
+
+label:hover {
+	transform: 	scale(1.1,1.1);
+}
+
+.no {
+	background-color: #D8124B;
+}
+
+.yes {
+	background-color: #12D890;
+}
+
+.answer--yes, .answer--no {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .5s ease-in-out;
+}
+
+.answer--yes {
+	background-image: url('https://media.giphy.com/media/a3IWyhkEC0p32/giphy.gif');
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+.answer--no {
+	background-image: url('https://media.giphy.com/media/QBEhpJHrv7poQ/giphy.gif');
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+input.yes[type=checkbox]:checked ~ .answer--yes {
+  visibility: visible;
+	opacity: 100;
+}
+
+input.no[type=checkbox]:checked ~ .answer--no {
+  visibility: visible;
+	opacity: 100;
+}
