@@ -7,8 +7,16 @@
 	 font-size: 100%;
 }
  body {
-	 background: #eee;
+	 /*background: #eee;*/
 	 font-size: 10px;
+	 /*background: #DD5E89; 
+background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89); 
+background: linear-gradient(to right, #F7BB97, #DD5E89); 
+*/
+
+background-color: #e2d5e6;
+background-image: linear-gradient(315deg, #e2d5e6 0%, #e1d4e6 74%);
+
 }
  .heart {
 	 animation: 1s pulse infinite;
@@ -17,7 +25,12 @@
 	 width: 40vmax;
 }
  .heart:before, .heart:after {
-	 background: #ee565a;
+	 /*background: #ee565a;*/
+
+
+background-color: #f71735;
+background-image: linear-gradient(147deg, #f71735 0%, #db3445 74%);
+
 	 border-radius: 20vmax 20vmax 4vmax 4vmax;
 	 content: "";
 	 left: 20vmax;
@@ -93,7 +106,7 @@
 
 
 
-body {
+/*body {
 	background: 
 radial-gradient(circle closest-side at 60% 43%, #323232 26%, rgba(187,0,51,0) 27%),
 radial-gradient(circle closest-side at 40% 43%, #323232 26%, rgba(187,0,51,0) 27%),
@@ -106,10 +119,10 @@ radial-gradient(circle closest-side at 40% 43%, #323232 26%, rgba(187,0,51,0) 27
 radial-gradient(circle closest-side at 40% 22%, #3c3c3c 45%, rgba(221,51,85,0) 46%) 50px 50px,
 radial-gradient(circle closest-side at 60% 22%, #3c3c3c 45%, rgba(221,51,85,0) 46%) 50px 50px,
 radial-gradient(circle closest-side at 50% 35%, #3c3c3c 30%, rgba(221,51,85,0) 31%) 50px 50px;
-	background-color:#323232;
+	background-color: #323232;
 	background-size:100px 100px;
 	font-family: 'Lato', sans-serif;
-}
+}*/
 
 
 .centered {
@@ -149,10 +162,12 @@ label:hover {
 
 .no {
 	background-color: #D8124B;
+	box-shadow: 4px 5px 5px 1px rgba(0,0,0,0.3);
 }
 
 .yes {
 	background-color: #12D890;
+	box-shadow: 4px 5px 5px 1px rgba(0,0,0,0.3);
 }
 
 .answer--yes, .answer--no {
@@ -188,3 +203,5 @@ input.no[type=checkbox]:checked ~ .answer--no {
   visibility: visible;
 	opacity: 100;
 }
+
+
